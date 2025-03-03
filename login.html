@@ -554,6 +554,7 @@
       try {
         const userCredential = await createUserWithEmailAndPassword(auth, email, password);
         const user = userCredential.user;
+        showMessage('success', 'Account Create successful!');
         
         // Update profile
         await updateProfile(user, {
